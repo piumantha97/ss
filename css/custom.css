@@ -1,0 +1,85 @@
+.bi-facebook { color: #3b5998; }
+.bi-twitter { color: #1da1f2; }
+.bi-youtube { color: #ff0000; }
+.bi-instagram { color: #e4405f; }
+.bi-pinterest { color: #bd081c; }
+.bi-whatsapp { color: #25d366; }
+
+
+/* General Styling for Floating Button */
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px; /* Adjust space from bottom */
+    right: 20px; /* Adjust space from right */
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%; /* Circular button */
+    width: 60px; /* Button size */
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Ensure it's above other elements */
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float i {
+    font-size: 28px; /* Icon size */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1); /* Zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .whatsapp-float i {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 45px;
+        height: 45px;
+        bottom: 100px;
+        right: 30px;
+    }
+    .whatsapp-float i {
+        font-size: 20px;
+    }
+}
+
+/* Default styling: 1 column for small screens (mobile) */
+@media (max-width: 480px) { /* Adjust breakpoint as needed */
+    .property__gallery .col-lg-3, 
+    .property__gallery .col-md-4, 
+    .property__gallery .col-sm-6 {
+        width: 50%; /* Make each item take half the width */
+        float: left; /* Align items next to each other */
+        max-width: 50%; /* Ensure they fit correctly */
+        padding: 5px; /* Add spacing if needed */
+        box-sizing: border-box; /* Prevent padding from affecting width */
+    }
+    .categories__item.categories__large__item{
+        height: 314px !important;
+    }
+
+    .instagram__item{
+    display: none;
+    }
+    .filter__controls li{
+        margin-right: 15px;
+    }
+}
